@@ -66,17 +66,17 @@ export default function HomePage() {
       <main>
       <Paper style={{ height: "100vh", backgroundColor: "#F5F5F5" }}>
         <Grid container alignItems="center" direction="column" >
-          <Grid item style={{ marginTop: 50 }}>
+          <Grid item style={{ marginTop: 100 }}>
             {/* <QrReader
                 delay={QrDelay}
                 style={classes.previewStyle}
                 onError={handleError}
                 onScan={handleScan}
             /> */}
-            <Webcam />
+            <Webcam height={400} width={350} screenshotFormat="image/jpeg"/>
           </Grid>
-          <Grid item style={{ marginTop: 50 }}>
-            <Button variant="contained" color="secondary" style={{ width: 300, fontSize: 24, height: 150, borderRadius: 10 }}>
+          <Grid item style={{ marginTop: 20 }}>
+            <Button variant="contained" color="secondary" style={{ width: 300, fontSize: 24, height: 50, borderRadius: 10 }}>
               <Typography>Visit: { QrResult } </Typography>
             </Button>
           </Grid>
