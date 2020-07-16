@@ -55,7 +55,7 @@ export default function HomePage() {
             <Button variant="contained" color="primary" style={{ width: 300, fontSize: 24, height: 150, borderRadius: 10 }} 
             onClick={() => router.push("/qrScanner")}
             >
-              Scan QR Code
+              Check QR Code
             </Button>
           </Grid>
           <Grid item style={{ marginTop: 50 }}>

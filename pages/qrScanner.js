@@ -18,10 +18,10 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Webcam from "react-webcam";
 // import QrReader from 'react-qr-reader'
-// const QrReader = dynamic(
-//     () => import('react-qr-reader'),
-//     { ssr: false }
-//   )
+const QrReader = dynamic(
+    () => import('react-qr-reader'),
+    { ssr: false }
+  )
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,13 +67,18 @@ export default function HomePage() {
       <Paper style={{ height: "100vh", backgroundColor: "#F5F5F5" }}>
         <Grid container alignItems="center" direction="column" >
           <Grid item style={{ marginTop: 100 }}>
-            {/* <QrReader
+            {
+              typeof window !== "undefined" ?
+              <QrReader
                 delay={QrDelay}
                 style={classes.previewStyle}
                 onError={handleError}
                 onScan={handleScan}
-            /> */}
-            <Webcam height={400} width={350} screenshotFormat="image/jpeg"/>
+              />
+              :
+              null
+            }
+            {/* <Webcam height={400} width={350} screenshotFormat="image/jpeg"/> */}
           </Grid>
           <Grid item style={{ marginTop: 20 }}>
             <Button variant="contained" color="secondary" style={{ width: 300, fontSize: 24, height: 50, borderRadius: 10 }}>
