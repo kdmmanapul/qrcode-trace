@@ -217,7 +217,7 @@ export default function HomePage() {
           <Paper className={classes.paper}>
             <Grid container alignItems="center" direction="column" >
               <Grid item style={{ marginTop: 50 }}>
-                  <Typography variant="h4">Visit History of JC Torreda</Typography>
+                  <Typography variant="h6">Visit History of JC Torreda</Typography>
               </Grid>
               <Grid item style={{ marginTop: 20, padding: 10 }}>
                   <TableContainer component={Paper}>
