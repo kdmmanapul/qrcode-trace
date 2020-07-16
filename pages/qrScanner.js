@@ -71,7 +71,8 @@ export default function HomePage() {
               typeof window !== "undefined" ?
               <QrReader
                 delay={QrDelay}
-                style={classes.previewStyle}
+                // style={classes.previewStyle}
+                style={{ height: 380, width: 320 }}
                 onError={handleError}
                 onScan={handleScan}
               />
