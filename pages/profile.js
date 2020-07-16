@@ -28,6 +28,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
 import CommentIcon from '@material-ui/icons/Comment';
+import swal from 'sweetalert2';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,6 +80,17 @@ export default function HomePage() {
     setExpanded(isExpanded ? panel : false);
   };
 
+  function Save() {
+    swal.fire({
+      position: 'center',
+      type: 'success',
+      title: "Successfully Save Profile!",
+      showConfirmButton: false,
+      timer: 1500
+    })
+    // router.push("/homepage")
+  }
+
   return (
     <div className="container">
       <Header/>
@@ -87,7 +99,7 @@ export default function HomePage() {
       <Paper style={{ height: "120vh", backgroundColor: "#F5F5F5" }}>
         <Grid container alignItems="center" direction="column" style={{ padding: 10 }}>
             <Grid item style={{ marginTop: 80 }}>
-                <Avatar src="https://material-ui.com/static/images/avatar/1.jpg" style={{ width: 100, height: 100 }}/>
+                <Avatar src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/108224586_644209052864040_4314790488959681111_n.png?_nc_cat=107&_nc_sid=b96e70&_nc_eui2=AeH1CuStCcEBtW4ucCrGFPfacx_kZKMSAixzH-RkoxICLBWktlHV0sEDeoOi8KiV3NCrHV9Xu7H2f-FTf-g1CIQc&_nc_ht=scontent.fmnl17-2.fna&oh=fb1af6fbfa4adbb5fbd408c065cc1fed&oe=5F33C29F" style={{ width: 200, height: 200 }}/>
             </Grid>
             <Grid item style={{ marginTop: 20 }}>
                 <Typography style={{ fontSize: 24 }}>JC Torreda</Typography>
@@ -232,7 +244,7 @@ export default function HomePage() {
                 </Accordion>
             </Grid>
             <Grid item style={{ marginTop: 10 }}>
-              <Button variant="contained" color="primary" style={{ width: 300, fontSize: 12, height: 50, borderRadius: 10 }} onClick={() => router.push("/homepage")}>
+              <Button variant="contained" color="primary" style={{ width: 300, fontSize: 12, height: 50, borderRadius: 10 }} onClick={() => Save()}>
                 Save
               </Button>
             </Grid>

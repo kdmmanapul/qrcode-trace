@@ -60,7 +60,7 @@ export default function HomePage() {
           </Grid>
           <Grid item style={{ marginTop: 50 }}>
             <Button variant="contained" color="secondary" style={{ width: 300, fontSize: 24, height: 150, borderRadius: 10 }}>
-              <Typography>Last Visited: SM North Edsa</Typography>
+              <Typography>Last Visited: Jollibee, SM North Edsa</Typography>
             </Button>
           </Grid>
         </Grid>

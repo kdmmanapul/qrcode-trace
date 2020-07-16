@@ -17,6 +17,7 @@
     "react-qr-reader": "^2.2.1",
     "react-qr-scanner": "0.0.9",
     "react-webcam": "^5.2.0",
+    "sweetalert2": "^9.17.0",
     "window": "^4.2.7"
   }
 }
