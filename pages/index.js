@@ -41,10 +41,10 @@ export default function Home() {
               <Typography style={{ fontSize: 24, marginBottom: 10 }}>Login</Typography>
             </Grid>
             <Grid item>
-              <TextField label="Username" variant="outlined" style={{ width: 300, borderRadius: 15 }}/>
+              <TextField label="Username" style={{ width: 300, borderRadius: 15 }}/>
             </Grid>
             <Grid item style={{ marginTop: 30 }}>
-              <TextField label="Password" variant="outlined" style={{ width: 300, borderRadius: 15 }}/>
+              <TextField label="Password" style={{ width: 300, borderRadius: 15 }}/>
             </Grid>
             <Grid item style={{ marginTop: 30 }}>
               <Button variant="contained" color="primary" style={{ width: 300, fontSize: 12, height: 50, borderRadius: 10 }} onClick={() => router.push("/homepage")}>
